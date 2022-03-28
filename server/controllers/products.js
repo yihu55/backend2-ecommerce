@@ -6,8 +6,8 @@ const productRoute = express.Router();
 
 productRoute.get('/', async (req, res) => {
   //const products = await readProducts();
-  const product = await getAllProducts();
-  res.json({ product });
+  const products = await getAllProducts();
+  res.json({ products });
 });
 
 productRoute.get('/:sku', async (req, res) => {
